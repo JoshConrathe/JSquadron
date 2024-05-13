@@ -1,15 +1,11 @@
 ﻿
 <style type="text/css">
-    #jobApplicationForm {
-        height: 461px;
-        width: 583px;
+    .BigApplyButton {
     }
 </style>
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ApplicationViewer.aspx.cs" Inherits="_1Viewer" %>
 
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml">
-    <head runat="server">
-        <title>Job Application</title>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head runat="server"><title>Job Application</title>
     <link
       href="Application.css"
       rel="stylesheet" />
@@ -25,7 +21,7 @@
     <div class="grid-container">
       <header class="header">
         <div class="menu-icon">
-          <span>MENUU-icon">
+          <span>MENUU-icon"</span>
           <span>MENU</span>
         </div>
         <div class="header-right">
@@ -82,57 +78,16 @@
               <div class="part-inner">
                 <h3>Receptionist</h3>
               </div>
-              <p>
-                A receptionists will schedule appointments for patients, pick up deliveries and take care of administration tasks.
+              <p>A receptionists will schedule appointments for patients, pick up deliveries and take care of administration tasks.
               </p>
             </div>
+            <div class="application-container">
+                <form runat="server" id="applicationForm">
+                    <asp:Button CssClass="BigApplyButton" ID="ApplyButtonId" runat="server" Text="Apply for a position" OnClick="ApplyButtonId_Click" BackColor="#33CC33" Font-Bold="True" Font-Size="Medium" ForeColor="White" Height="102px" Width="301px" BorderStyle="None" />
+                </form>
+            </div>
         </div>
-
-        <div class="application-container">
-          <h3>Apply for a Job</h3>
-          <form
-            class="job-application-form"
-            id="jobApplicationForm"
-            runat="server">
-            <label for="fullName">Full Name:</label>
-            <input
-              type="text"
-              id="fullName"
-              name="fullName"
-              required />
-
-            <label for="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required />
-
-            <label for="phone">Phone:</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              required />
-
-            <label for="position">Position:</label>
-            <input
-              type="text"
-              id="position"
-              name="position"
-              required />
-
-            <label for="resume">Resume:</label>
-            <input
-              type="file"
-              id="resume"
-              name="resume"
-              accept=".pdf,.doc,.docx"
-              />&nbsp;
-              <br />
-              <asp:Button ID="ApplyButton" runat="server" Text="Apply Now" Width="244px" OnClick="ApplyButton_Click" />
-          </form>
-        </div>
+        
       </main>
     </div>
   </body>

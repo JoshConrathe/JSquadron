@@ -14,9 +14,9 @@ public partial class _1Viewer : System.Web.UI.Page
 
     }
 
-    protected void ApplyButton_Click(object sender, EventArgs e)
+    protected void ApplyButtonId_Click(object sender, EventArgs e)
     {
-        Console.WriteLine("Add button clickewd");
-        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Application submittion was successful!')", true);
+        Console.WriteLine("Add button clicked");
+        Response.Redirect("ApplicationDataEntry.aspx");
     }
 }
