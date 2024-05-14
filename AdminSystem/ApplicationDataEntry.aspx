@@ -96,7 +96,21 @@
             <div class="application-container">
                 <h3>Apply for a Job</h3>
                 <form id="jobApplicationForm" runat="server" style="z-index: 1">
-                    <label for="fullName" style="width: 268px; height: 39px;">Full Name: </label>
+                    <label for="staffId" style="width: 268px; height: 39px;">Staff Id:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+                    <input
+                        type="text"
+                        id="txtStaffId"
+                        name="staffId"
+                        runat="server"
+                        required
+                        placeholder="e.g. 3"
+                        style="width: 293px; height: 39px;" />
+
+                    <label for="fullName" style="width: 268px; height: 39px;">
+                        <br />
+                        <br />
+                        Full Name:
+                    </label>
                     <input
                         type="text"
                         id="txtFullName"
@@ -161,7 +175,10 @@
                         runat="server"
                         accept=".pdf,.doc,.docx"
                         style="width: 293px; height: 39px;" />&nbsp;
-                <br />
+                    <br />
+                    <br />
+                    <asp:Button ID="FindButton" runat="server" UseSubmitBehavior="false" Text="Find" Width="80px" OnClick="FindButton_Click" BackColor="#F9F9F9" BorderColor="#5C5D5C" BorderStyle="Solid" ForeColor="#5C5D5C" Height="43px" Style="margin-bottom: 12px; margin-top: 12px;" CssClass="findButton" />
+
                     <br />
                     <asp:Button ID="SubmitButtonId" runat="server" UseSubmitBehavior="true" Text="Submit aplication" Width="254px" OnClick="SubmitButtonId_Click" BackColor="#009933" BorderColor="#009933" BorderStyle="Solid" CssClass="applyButton" Font-Bold="True" Height="43px" Font-Italic="False" ForeColor="White" />
                     <asp:Button ID="CancelButtonId" runat="server" UseSubmitBehavior="false" Text="Cancel" Width="154px" OnClick="CancelButtonId_Click" BackColor="#F9F9F9" BorderColor="#009933" BorderStyle="Solid" ForeColor="#009933" Height="43px" Style="margin-left: 28px" />

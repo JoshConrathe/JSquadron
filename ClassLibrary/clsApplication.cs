@@ -36,15 +36,38 @@ namespace ClassLibrary
             Resume = resume;
         }
 
-        public bool Find(string position)
+        public bool Find(int StaffId)
         {
-            mPositionApplied = "doctor";
-            mEmailAddress = "example@gmail.com";
-            mApplicantName = "John Smith";
-            mResume = "resume example";
-            mContactNumber = "+44854261723";
 
-            return true;
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@StaffId", StaffId);
+            DB.Execute("jobApplication_FilterByStaffId");
+
+            if (DB.Count == 1)
+            {
+                mStaffId = StaffId;
+                mApplicantName = Convert.ToString(DB.DataTable.Rows[0]["ApplicantName"]);
+                mContactNumber = Convert.ToString(DB.DataTable.Rows[0]["ContactNumber"]);
+                mEmailAddress = Convert.ToString(DB.DataTable.Rows[0]["EmailAddress"]);
+                mPositionApplied = Convert.ToString(DB.DataTable.Rows[0]["PositionApplied"]);
+
+                if (DB.DataTable.Rows[0]["Resume"] != DBNull.Value)
+                {
+                    mResume = Convert.ToString(DB.DataTable.Rows[0]["Resume"]);
+                }
+                else
+                {
+                    mResume = null;
+                }
+
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
+
         }
     }
 }

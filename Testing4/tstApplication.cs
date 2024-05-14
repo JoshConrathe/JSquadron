@@ -104,9 +104,10 @@ namespace Testing4
             clsApplication jobApp = new clsApplication();
             Boolean Found = false;
             Boolean OK = true;
-            string Name = "John Smith";
-
-            Found = jobApp.Find(Name);
+            int staffId = 2;
+            Found = jobApp.Find(staffId);
+            string Name = "NameTest";
+            
 
             if (jobApp.ApplicantName != Name)
             {
@@ -121,11 +122,11 @@ namespace Testing4
             clsApplication jobApp = new clsApplication();
             Boolean Found = false;
             Boolean OK = true;
-            string Position = "DoCtOr";
+            
+            int staffId = 2;
+            Found = jobApp.Find(staffId);
 
-            Found = jobApp.Find(Position);
-
-            if (jobApp.PositionApplied != Position.ToLower())
+            if (jobApp.PositionApplied != "PositionTest")
             {
                 OK = false;
             }
@@ -138,9 +139,9 @@ namespace Testing4
             clsApplication jobApp = new clsApplication();
             Boolean Found = false;
             Boolean OK = true;
-            string Email = "example@gmail.com";
-
-            Found = jobApp.Find(Email);
+            string Email = "example@test.com";
+            int staffId = 2;
+            Found = jobApp.Find(staffId);
 
             if (jobApp.EmailAddress != Email)
             {
@@ -155,11 +156,11 @@ namespace Testing4
             clsApplication jobApp = new clsApplication();
             Boolean Found = false;
             Boolean OK = true;
-            string Contact = "+44854261723";
+            string Contact = "NumberTest";
+            int staffId = 2;
+            Found = jobApp.Find(staffId);
 
-            Found = jobApp.Find(Contact);
-
-            if (jobApp.ContactNumber != Contact)
+            if (jobApp.ContactNumber != "ContactTest")
             {
                 OK = false;
             }
@@ -172,11 +173,11 @@ namespace Testing4
             clsApplication jobApp = new clsApplication();
             Boolean Found = false;
             Boolean OK = true;
-            string Resume = "resume example";
+            string Resume = null;
+            int staffId = 2;
+            Found = jobApp.Find(staffId);
 
-            Found = jobApp.Find(Resume);
-
-            if (jobApp.Resume != Resume)
+            if (jobApp.Resume != null)
             {
                 OK = false;
             }
