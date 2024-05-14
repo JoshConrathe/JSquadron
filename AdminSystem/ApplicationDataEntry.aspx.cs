@@ -16,8 +16,26 @@ public partial class _1_DataEntry : System.Web.UI.Page
     protected void SubmitButtonId_Click(object sender, EventArgs e)
     {
         clsApplication Application = new clsApplication();
-        
-        Console.WriteLine("Add button clicked");
+
+        string fullName = String.Format("{0}", Request.Form["txtFullName"]);
+        string contactNumber = String.Format("{0}", Request.Form["txtPhone"]);
+        string positionApplied = String.Format("{0}", Request.Form["txtPosition"]);
+        string emailAddress = String.Format("{0}", Request.Form["txtEmail"]);
+        string resume = String.Format("{0}", Request.Form["txtResume"]);
+
+        Application.ApplicantName = fullName;
+        Application.ContactNumber = contactNumber;
+        Application.PoistionApplied = positionApplied;
+        Application.EmailAddress = emailAddress;
+        if (resume != null)
+        {
+            Application.Resume = resume;
+        } else
+        {
+            Application.Resume = null;
+        }
+
+        Session["Application"] = Application;   
         ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Application submittion was successful!')", true);
         Response.Redirect("ApplicationViewer.aspx");
     }
@@ -26,5 +44,6 @@ public partial class _1_DataEntry : System.Web.UI.Page
     {
         Console.WriteLine("Cancel button clicked");
         ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Application cancelled!')", true);
+        Response.Redirect("ApplicationViewer.aspx");
     }
 }

@@ -6,17 +6,23 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using ClassLibrary;
 
 public partial class _1Viewer : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["Application"] != null)
+        {
+            clsApplication Application = (clsApplication)Session["Application"];
+            Response.Write(Application.ApplicantName);
+            Response.Write(Application.ContactNumber);
+        }
     }
+
 
     protected void ApplyButtonId_Click(object sender, EventArgs e)
     {
-        Console.WriteLine("Add button clicked");
         Response.Redirect("ApplicationDataEntry.aspx");
     }
 }

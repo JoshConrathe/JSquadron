@@ -121,6 +121,7 @@ a {
 
                 */
 
+
 .application-container h3 {
     margin-top: 0.5rem;
     font-size: 1.25rem;
@@ -154,15 +155,33 @@ a {
     border-style: none;
     border-color: inherit;
     border-width: medium;
-    background-color: #4caf50;
+    background-color: #CCCCCC;
     color: white;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
     margin-left: 0px;
+    z-index: 1;
+    left: 417px;
+    top: 1369px;
+    position: absolute;
+    height: 53px;
+    width: 152px;
 }
 
 .job-application-form input[type="submit"]:hover {
     background-color: #45a049;
+}
+
+
+.applicationForm {
+
+}
+
+.BigApplyButton {
+    border-radius: 5px;
+
+}
+.BigApplyButton {
 }
