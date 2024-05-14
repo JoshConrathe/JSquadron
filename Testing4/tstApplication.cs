@@ -94,8 +94,94 @@ namespace Testing4
             clsApplication jobApp = new clsApplication();
             String TestPosition = "Doctor";
 
-            jobApp.PoistionApplied = TestPosition;
-            Assert.AreEqual(jobApp.PoistionApplied, TestPosition);
+            jobApp.PositionApplied = TestPosition;
+            Assert.AreEqual(jobApp.PositionApplied, TestPosition);
         }
+
+        [TestMethod]
+        public void TestApplicantNameFound()
+        {
+            clsApplication jobApp = new clsApplication();
+            Boolean Found = false;
+            Boolean OK = true;
+            string Name = "John Smith";
+
+            Found = jobApp.Find(Name);
+
+            if (jobApp.ApplicantName != Name)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestPositionFound()
+        {
+            clsApplication jobApp = new clsApplication();
+            Boolean Found = false;
+            Boolean OK = true;
+            string Position = "DoCtOr";
+
+            Found = jobApp.Find(Position);
+
+            if (jobApp.PositionApplied != Position.ToLower())
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestEmailAddressFound()
+        {
+            clsApplication jobApp = new clsApplication();
+            Boolean Found = false;
+            Boolean OK = true;
+            string Email = "example@gmail.com";
+
+            Found = jobApp.Find(Email);
+
+            if (jobApp.EmailAddress != Email)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestContactNumberFound()
+        {
+            clsApplication jobApp = new clsApplication();
+            Boolean Found = false;
+            Boolean OK = true;
+            string Contact = "+44854261723";
+
+            Found = jobApp.Find(Contact);
+
+            if (jobApp.ContactNumber != Contact)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestResumeFound()
+        {
+            clsApplication jobApp = new clsApplication();
+            Boolean Found = false;
+            Boolean OK = true;
+            string Resume = "resume example";
+
+            Found = jobApp.Find(Resume);
+
+            if (jobApp.Resume != Resume)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
     }
 }

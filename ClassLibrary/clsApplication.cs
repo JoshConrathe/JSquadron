@@ -1,16 +1,26 @@
-﻿namespace ClassLibrary
+﻿using System;
+
+namespace ClassLibrary
 {
     public class clsApplication
     {
+        private int mApplictaionId;
+        private int mAdminId;
+        private int mStaffId;
+        private string mApplicantName;
+        private string mContactNumber;
+        private string mEmailAddress;
+        private string mPositionApplied;
+        private string mResume;
         // Fields
-        public int ApplicationId { get; set; }
-        public int? AdminId { get; set; }
-        public int? StaffId { get; set; }
-        public string ApplicantName { get; set; }
-        public string ContactNumber { get; set; }
-        public string EmailAddress { get; set; }
-        public string PoistionApplied { get; set; }
-        public string Resume { get; set; }
+        public int ApplicationId { get { return mApplictaionId; } set { mApplictaionId = value; } }
+        public int AdminId { get { return mAdminId; } set { mAdminId = value; } }
+        public int StaffId { get { return mStaffId; } set { mStaffId = value; } }
+        public string ApplicantName { get { return mApplicantName; } set { mApplicantName = value; } }
+        public string ContactNumber { get { return mContactNumber; } set { mContactNumber = value; } }
+        public string EmailAddress { get { return mEmailAddress; } set { mEmailAddress = value; } }
+        public string PositionApplied { get { return mPositionApplied; } set { mPositionApplied = value; } }
+        public string Resume { get { return mResume; } set { mResume = value; } }
 
         // Constructor
 
@@ -22,9 +32,19 @@
             ApplicantName = applicantName;
             EmailAddress = emailAddress;
             ContactNumber = contactNumber;
-            PoistionApplied = positionApplied;
+            PositionApplied = positionApplied;
             Resume = resume;
         }
-       
+
+        public bool Find(string position)
+        {
+            mPositionApplied = "doctor";
+            mEmailAddress = "example@gmail.com";
+            mApplicantName = "John Smith";
+            mResume = "resume example";
+            mContactNumber = "+44854261723";
+
+            return true;
+        }
     }
 }

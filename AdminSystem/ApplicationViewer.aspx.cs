@@ -15,8 +15,7 @@ public partial class _1Viewer : System.Web.UI.Page
         if (Session["Application"] != null)
         {
             clsApplication Application = (clsApplication)Session["Application"];
-            Response.Write(Application.ApplicantName);
-            Response.Write(Application.ContactNumber);
+            
         }
     }
 

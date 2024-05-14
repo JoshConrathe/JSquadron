@@ -25,7 +25,7 @@ public partial class _1_DataEntry : System.Web.UI.Page
 
         Application.ApplicantName = fullName;
         Application.ContactNumber = contactNumber;
-        Application.PoistionApplied = positionApplied;
+        Application.PositionApplied = positionApplied;
         Application.EmailAddress = emailAddress;
         if (resume != null)
         {
