@@ -8,6 +8,12 @@ namespace Testing4
     [TestClass]
     public class tstApplication
     {
+        string name = "John Smith";
+        string contactNo = "+4476536212";
+        string email = "example@test.com";
+        string position = "doctor";
+        string resume = "localhost/public/saved/resume.pdf";
+
         [TestMethod]
         public void instanceConstructorOk()
         {
@@ -182,6 +188,16 @@ namespace Testing4
                 OK = false;
             }
             Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ValidMethodOK()
+        {
+            clsApplication jobApp = new clsApplication();
+            String Error = "";
+            Error = jobApp.Valid(contactNo, email, position, resume);
+
+            Assert.AreEqual(Error, "");
         }
 
     }
