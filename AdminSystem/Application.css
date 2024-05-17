@@ -185,3 +185,12 @@ a {
 }
 .BigApplyButton {
 }
+
+.findButton {
+    background-color: darkgrey;
+    border-radius: 4px;
+}
+
+.findButton:hover {
+    background-color: grey;
+}

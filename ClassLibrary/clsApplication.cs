@@ -69,5 +69,65 @@ namespace ClassLibrary
             }
 
         }
+
+        public string Valid(int StaffId, string name, string contactNo, string email, string position, string resume)
+        {
+            String Error = "";
+
+            if (name.Length == 0)
+            {
+                Error = Error + "Name may not be empty : ";
+            }
+
+            if (name.Length > 30)
+            {
+                Error = Error + "Name cannot be longer than 30 characters : ";
+            }
+
+            if (contactNo.Length == 0) 
+            {
+                Error = Error + "Contact number can not be blank : ";
+            }
+
+            if (contactNo.Length > 14)
+            {
+                Error = Error + "Contact Number cannot be longer than 14 characters : ";
+            }
+
+            if (email.Length == 0) 
+            {
+                Error = Error + "Email address cannot be blank : ";
+            }
+
+            if (email.Length > 30)
+            {
+                Error = Error + "Email cannot be longer than 30 characters : ";
+            }
+
+            if (position.Length == 0) 
+            {
+                Error = Error + "Position cannot be blank : ";
+            }
+
+            if ( position.Length > 15)
+            {
+                Error = Error + "Position cannot be longer than 15 characters : ";
+            }
+
+            if (resume != null) 
+            {
+                if (resume.Length <= 0) 
+                {
+                    Error = Error + "Invalid resume length : ";
+                }
+
+                if (resume.Length > 100)
+                {
+                    Error = Error + "Resume length cannot exceed 100 : ";
+                }
+            }
+
+            return Error;
+        }
     }
 }
