@@ -85,9 +85,9 @@ namespace Testing2
             clsStaff AnStaff = new clsStaff();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 StaffId = 5;
+            Int32 StaffId =3;
             Found = AnStaff.Find(StaffId);
-            if (AnStaff.StaffId != 5)
+            if (AnStaff.StaffId != 3)
             {
                 OK = false;
             }
@@ -100,9 +100,9 @@ namespace Testing2
             clsStaff AnStaff = new clsStaff();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 StaffId =5;
+            Int32 StaffId =3;
             Found = AnStaff.Find(StaffId);
-            if (AnStaff.StaffName != "CAN")
+            if (AnStaff.StaffName != "Ozmen")
             {
                 OK=false;
             }
@@ -114,9 +114,9 @@ namespace Testing2
             clsStaff AnStaff = new clsStaff();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 StaffId =5;
+            Int32 StaffId =3;
             Found = AnStaff.Find(StaffId);
-            if (AnStaff.StaffPosition != "DOCTOR")
+            if (AnStaff.StaffPosition != "ss")
             {
                 OK = false;
             }
@@ -128,7 +128,7 @@ namespace Testing2
             clsStaff AnStaff = new clsStaff();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 StaffId = 5;
+            Int32 StaffId = 3;
             Found= AnStaff.Find(StaffId);
             if (AnStaff.StaffContactNumber != 1231231231)
             {
@@ -142,9 +142,9 @@ namespace Testing2
             clsStaff AnStaff = new clsStaff();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 StaffId = 5;
+            Int32 StaffId =3;
             Found= AnStaff.Find(StaffId);
-            if (AnStaff.StaffSalary != 1.0000)
+            if (AnStaff.StaffSalary != 10.0000)
             {
                 OK=false;
             }
@@ -156,7 +156,7 @@ namespace Testing2
             clsStaff AnStaff = new clsStaff();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 StaffId = 5;
+            Int32 StaffId = 3;
             Found= AnStaff.Find(StaffId);
             if (AnStaff.AdminID != 1)
             {
