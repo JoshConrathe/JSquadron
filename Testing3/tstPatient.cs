@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.ComponentModel.Design;
+using System.Data;
 using System.IO;
 
 namespace Testing3
@@ -15,6 +16,7 @@ namespace Testing3
         string patientAddress = "LE1 5SP";
         string patientMedHistory = "EYES";
         string adminID = "1";
+
 
 
         [TestMethod]
@@ -86,7 +88,7 @@ namespace Testing3
         {
             ClsPatient Patient = new ClsPatient();
             Boolean Found = false;
-            Int32 PatientId = 20;
+            Int32 PatientId = 61;
             Found = Patient.Find(PatientId);
             Assert.IsTrue(Found);
 
@@ -97,9 +99,9 @@ namespace Testing3
             ClsPatient Patient = new ClsPatient();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 PatientId = 20;
+            Int32 PatientId = 61;
             Found = Patient.Find(PatientId);
-            if (Patient.PatientId != 20)
+            if (Patient.PatientId != 61)
             {
                 OK = false;
             }
@@ -112,9 +114,9 @@ namespace Testing3
             ClsPatient Patient = new ClsPatient();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 PatientId = 20;
+            Int32 PatientId = 61;
             Found = Patient.Find(PatientId);
-            if (Patient.PatientName != "Sehmus")
+            if (Patient.PatientName != "Can")
             {
                 OK = false;
             }
@@ -127,9 +129,9 @@ namespace Testing3
             ClsPatient Patient = new ClsPatient();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 PatientId = 20;
+            Int32 PatientId = 61;
             Found = Patient.Find(PatientId);
-            if (Patient.PatientDataBirth != Convert.ToDateTime("13/05/2024"))
+            if (Patient.PatientDataBirth != Convert.ToDateTime("19/05/2024"))
             {
                 OK = false;
             }
@@ -141,9 +143,9 @@ namespace Testing3
             ClsPatient Patient = new ClsPatient();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 PatientId = 20;
+            Int32 PatientId = 61;
             Found = Patient.Find(PatientId);
-            if (Patient.PatientNumber != 1234567891)
+            if (Patient.PatientNumber != 1231231231)
             {
                 OK = false;
             }
@@ -155,9 +157,9 @@ namespace Testing3
             ClsPatient Patient = new ClsPatient();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 PatientId = 20;
+            Int32 PatientId = 61;
             Found = Patient.Find(PatientId);
-            if (Patient.PatientAddress != "LE1 5SP")
+            if (Patient.PatientAddress != "yyy yyy")
             {
                 OK = false;
             }
@@ -169,9 +171,9 @@ namespace Testing3
             ClsPatient Patient = new ClsPatient();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 PatientId = 20;
+            Int32 PatientId = 61;
             Found = Patient.Find(PatientId);
-            if (Patient.PatientMedHistory != "EYE")
+            if (Patient.PatientMedHistory != "EYES")
             {
                 OK = false;
             }
@@ -183,7 +185,7 @@ namespace Testing3
             ClsPatient Patient = new ClsPatient();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 PatientId = 20;
+            Int32 PatientId = 61;
             Found = Patient.Find(PatientId);
             if (Patient.AdminID != 1)
             {
@@ -548,7 +550,25 @@ namespace Testing3
             Assert.AreEqual(Error, "");
 
         }
-        
+        [TestMethod]
+        public void StatStatisticsGroupByDate()
+        {
+            ClsPatient AnPatient = new ClsPatient();
+            DataTable dt = AnPatient.StatisticsGroupByDate();
+            int noOfRecord=4;
+            Assert.AreEqual(noOfRecord, dt.Rows.Count);
+        }
+        [TestMethod]
+        public void StatStatisticsGroupByHistory()
+        {
+            ClsPatient AnPatient = new ClsPatient();
+            DataTable dt = AnPatient.StatisticsGroupByHistory();
+            int noOfRecord = 2;
+            Assert.AreEqual(noOfRecord, dt.Rows.Count);
+        }
+
+
+
 
 
 

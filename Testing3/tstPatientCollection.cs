@@ -65,8 +65,119 @@ namespace Testing3
             AllPatient.PatientList = TestList;
             Assert.AreEqual(AllPatient.Count, TestList.Count);
         }
-      
-  
+        [TestMethod]
+        public void AddMethodOk() { 
+        clsPatientCollection AllPatient = new clsPatientCollection();
+            ClsPatient TestItem = new ClsPatient();
+            Int32 PrimaryKey = 0;
+            TestItem.PatientId = 48;
+            TestItem.PatientName = "Can";
+            TestItem.PatientDataBirth = DateTime.Now;
+            TestItem.PatientNumber = 1231231231;
+            TestItem.PatientAddress = "LE1 5SP";
+            TestItem.PatientMedHistory = "EYES";
+            TestItem.AdminID = 1;
+            AllPatient.ThisPatient = TestItem;
+            PrimaryKey = AllPatient.Add();
+            AllPatient.ThisPatient.Find(PrimaryKey);
+            Assert.AreEqual(AllPatient.ThisPatient, TestItem);
+
+        }
+        [TestMethod ]
+        public void UpdateMethodOK()
+        {
+            clsPatientCollection AllPatient = new clsPatientCollection();
+            ClsPatient TestItem = new ClsPatient();
+            Int32 PrimaryKey = 0;
+            TestItem.PatientId = 48;
+            TestItem.PatientName = "Can";
+            TestItem.PatientDataBirth = DateTime.Now;
+            TestItem.PatientNumber = 1111111111;
+            TestItem.PatientAddress = "LE1 5SP";
+            TestItem.PatientMedHistory = "EYES";
+            TestItem.AdminID = 1;
+            AllPatient.ThisPatient = TestItem;
+            PrimaryKey = AllPatient.Add();
+            TestItem.PatientId = PrimaryKey;
+            TestItem.PatientName = "Can";
+            TestItem.PatientDataBirth = DateTime.Now;
+            TestItem.PatientNumber = 1111111111;
+            TestItem.PatientAddress = "LE1 5SP";
+            TestItem.PatientMedHistory = "EYES";
+            TestItem.AdminID = 1;
+            AllPatient.ThisPatient = TestItem;
+            AllPatient.Update();
+            AllPatient.ThisPatient.Find(PrimaryKey);
+            Assert.AreEqual(AllPatient.ThisPatient, TestItem);
+
+
+
+        }
+        [TestMethod]
+        public void DeleteMethodOK()
+        {
+            clsPatientCollection AllPatient = new clsPatientCollection();
+            ClsPatient TestItem = new ClsPatient();
+            Int32 PrimaryKey = 0;
+            TestItem.PatientId = 48;
+            TestItem.PatientName = "Can";
+            TestItem.PatientDataBirth = DateTime.Now;
+            TestItem.PatientNumber = 1231231231;
+            TestItem.PatientAddress = "LE1 5SP";
+            TestItem.PatientMedHistory = "EYE";
+            TestItem.AdminID = 1;
+            AllPatient.ThisPatient = TestItem;
+            PrimaryKey = AllPatient.Add();
+            TestItem.PatientId = PrimaryKey;
+            AllPatient.ThisPatient.Find(PrimaryKey);
+            AllPatient.Delete();
+            Boolean Found = AllPatient.ThisPatient.Find(PrimaryKey);
+            Assert.IsFalse( Found);
+        }
+
+        [TestMethod]
+        public void ReportByPostCodeMethodOK()
+        {
+            clsPatientCollection ALLpatient = new clsPatientCollection();
+            clsPatientCollection FilterePatient = new clsPatientCollection();
+            FilterePatient.ReportByAddress("");
+            Assert.AreEqual(ALLpatient.Count, FilterePatient.Count);
+        }
+        [TestMethod]
+        public void ReportByPostCodeNoneFound()
+        {
+            clsPatientCollection FilterePatient = new clsPatientCollection();
+            FilterePatient.ReportByAddress("xxx xxx");
+            Assert.AreEqual(0, FilterePatient.Count);
+        }
+        [TestMethod]
+        public void ReportByPostCodeTestDataFound() 
+        {
+            clsPatientCollection FilterePatient= new clsPatientCollection();
+            Boolean OK = true;
+            FilterePatient.ReportByAddress("yyy yyy");
+            if (FilterePatient.Count == 2)
+            {
+                if (FilterePatient.PatientList[0].PatientId !=61)
+                {
+                    OK = false;
+                }
+                if (FilterePatient.PatientList[1].PatientId !=63)
+                {
+                    OK=false;
+                }
+            }
+            else 
+            { 
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+       
+
+
+
+
 
     }
 }
