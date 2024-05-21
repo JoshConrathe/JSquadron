@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace ClassLibrary
 {
@@ -12,6 +13,7 @@ namespace ClassLibrary
         private String mPatientAddress;
         private String mPatientHistory;
         private Int32 mAdminId;
+       
 
         public Int32 PatientId
         {
@@ -104,9 +106,9 @@ namespace ClassLibrary
             {
                 mPatientId = Convert.ToInt32(DB.DataTable.Rows[0]["PatientID"]);
                 mPatientName = Convert.ToString(DB.DataTable.Rows[0]["name"]);
-                mStartDate = Convert.ToDateTime(DB.DataTable.Rows[0]["Date"]);
+                mStartDate = Convert.ToDateTime(DB.DataTable.Rows[0]["PatientDate"]);
                 mPatientNumber = Convert.ToInt32(DB.DataTable.Rows[0]["number"]);
-                mPatientAddress = Convert.ToString(DB.DataTable.Rows[0]["address"]);
+                mPatientAddress = Convert.ToString(DB.DataTable.Rows[0]["PostCode"]);
                 mPatientHistory = Convert.ToString(DB.DataTable.Rows[0]["medhistory"]);
                 mAdminId = Convert.ToInt32(DB.DataTable.Rows[0]["AdminId"]);
                 return true;
@@ -117,8 +119,7 @@ namespace ClassLibrary
             }
         }
 
-      
-
+     
 
         public string Valid(string patientName, string patientDataBirth, string patientNumber, string patientAddress, string patientMedHistory, string adminID)
         {
@@ -183,10 +184,18 @@ namespace ClassLibrary
             }
             return Error;
         }
-
-        public static implicit operator ClsPatient(clsStaff v)
+        public DataTable StatisticsGroupByDate()
         {
-            throw new NotImplementedException();
+            clsDataConnection DB = new clsDataConnection();
+            DB.Execute("sproc_Patient_Cound_GroupByDate");
+            return DB.DataTable;
+        }
+
+        public DataTable StatisticsGroupByHistory()
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.Execute("sproc_Patient_Cound_GroupByHistory");
+            return DB.DataTable;
         }
     }
 }
