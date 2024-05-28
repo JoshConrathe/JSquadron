@@ -1,4 +1,20 @@
-﻿body {
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <title>Login</title>
+    <link href="Login.css" rel="stylesheet"  />
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <style>
+        body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -58,7 +74,7 @@ h2 {
 
 .inputbox {
     position: relative;
-    margin 30px 0;
+    margin: 30px 0;
     width: 310px;
     border-bottom: 2px solid #fff;
 }
@@ -113,3 +129,31 @@ button {
     font-weight: 600;
     margin-top: 15px;
 }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+          <div>
+       <section class="Login">
+
+           <div class="form-box">
+
+               <div class="form-value">
+                   <formview action="">
+                       <h2>Login Details</h2>
+                       <div class="inputbox">
+                           <i class="fa-solid fa-user"></i>
+                           <asp:TextBox ID= "ID" runat="server"></asp:TextBox>
+                           <label for="" >User ID</label>
+                       </div>
+                       <div class="inputbox">
+                           <i class="fa-solid fa-lock"></i>
+                          <asp:TextBox ID= "PASS" runat="server"></asp:TextBox>
+                           <label for="" class="Password">Password</label>                                 
+                       </div>
+                       <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" Width="267px"> </asp:Button>
+       </section>
+   </div>
+    </form>
+</body>
+</html>

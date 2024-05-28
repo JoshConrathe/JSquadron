@@ -5,14 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
       <link href="StyleSheet.css" rel="stylesheet" />
-  <title>TeamMainMenu</title>>
-   <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+  <title>TeamMainMenu</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -21,27 +14,27 @@
           <div class="menu-icon">
               <span> MENU</span>
           </div>
-              <div class="header-right">
-                 <a href=""><span>Account</span> </a>
-              </div>
-      </header>
+      </header>   
       <aside class="sidebar">
-              <ul class="sidebar-list">
-                  <li class="sidebar-list-item" >
-                     <a href="4ConfirmDelete.aspx">Staff Registration</a>
-                  </li>
-                    <li class="sidebar-list-item" >
-                        <a href="">Patient Registration</a>
-                   </li>
-                   <li class="sidebar-list-item" >
-                         <a href="">Job Application </a>
-                   </li>
-                  <li class="sidebar-list-item" >
-                      <a href="">Appointment</a>
-                  </li>
-                  <li class="sidebar-list-item" >
-                      <a href="">Payment</a>
-                  </li>
+       <ul class="sidebar-list">
+       <li class="sidebar-list-item" >
+       <a href="Stafflist.aspx">Staff Registration</a>
+       </li>
+       <li class="sidebar-list-item" >  
+       <a href="PatientList.aspx">Patient Registration</a>
+       </li>
+       <li class="sidebar-list-item" >
+       <a href="">Job Application </a>
+       </li>
+       <li class="sidebar-list-item" >
+        <a href="">Appointment</a>
+        </li>
+        <li class="sidebar-list-item" >
+        <a href="">Payment</a>
+         </li>
+           <li class="sidebar-list-item" >
+            <a href="TeamMainMenu.aspx">Dashboard</a>
+             </li>
               </ul>    
       </aside>
   <main class="main-container">
@@ -82,10 +75,10 @@
       </div>
       <h1>1500</h1>
     </div>
-
-
+    </div>
+        </main>
   </div>
-       </main>
+   
     </form>
 </body>
 </html>
