@@ -9,6 +9,7 @@ using System.Web.UI.WebControls;
 using ClassLibrary;
 public partial class _1_DataEntry : System.Web.UI.Page
 {
+
     Int32 StaffId;
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -34,15 +35,13 @@ public partial class _1_DataEntry : System.Web.UI.Page
         txtStaffSalary.Text = staff.ThisStaff.StaffSalary.ToString();
         txtAdminID.Text = staff.ThisStaff.AdminID.ToString();
 
-
-
-
     }
 
 
 
     protected void Unnamed1_Click(object sender, EventArgs e)
     {
+
         clsStaff anstaf= new clsStaff();
         txtStaffID.Text = " ";
         txtStaffName.Text = " ";
@@ -54,6 +53,7 @@ public partial class _1_DataEntry : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
+
         clsStaff AnStaff = new clsStaff();
         string STAFFID = txtStaffID.Text;
         string StaffName = txtStaffName.Text;
@@ -106,10 +106,6 @@ public partial class _1_DataEntry : System.Web.UI.Page
         }
     }
 
-
-
-
-
     protected void Unnamed2_Click(object sender, EventArgs e)
     {
         Response.Redirect("StaffList.aspx");
@@ -145,6 +141,4 @@ public partial class _1_DataEntry : System.Web.UI.Page
         Response.Redirect("TeamMainMenu.aspx");
     }
   
-
-
 }

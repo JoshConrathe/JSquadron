@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+
     <title>Patient List</title>
     <style>
         body{
@@ -55,6 +56,7 @@
 <body>
     
     <form id="form1" runat="server">
+
         <div class="header">
             <asp:Label class="headerlabel" ID="Label1" runat="server" Text="Patient List"></asp:Label>
             <br />

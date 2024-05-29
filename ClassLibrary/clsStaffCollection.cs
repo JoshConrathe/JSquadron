@@ -66,6 +66,7 @@ namespace ClassLibrary
                 ANStaff.StaffId = Convert.ToInt32(DB.DataTable.Rows[Index]["StaffId"]);
                 ANStaff.StaffName = Convert.ToString(DB.DataTable.Rows[Index]["Name"]);
                 ANStaff.StaffPosition = Convert.ToString(DB.DataTable.Rows[Index]["Position"]);
+
                 ANStaff.StaffContactNumber = Convert.ToInt64(DB.DataTable.Rows[Index]["ContactNumber"]);
                 ANStaff.StaffSalary = Convert.ToInt32(DB.DataTable.Rows[Index]["Salary"]);
                 ANStaff.AdminID = Convert.ToInt32(DB.DataTable.Rows[Index]["AdminId"]);

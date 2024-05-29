@@ -1,4 +1,5 @@
 ﻿using System;
+
 using System.Collections.Generic;
 using System.Data;
 using System.Text.RegularExpressions;
@@ -104,6 +105,7 @@ namespace ClassLibrary
             
         }
 
+
         public DataTable StatisticsGroupByPosition()
         {
            clsDataConnection DB = new clsDataConnection ();
@@ -134,6 +136,7 @@ namespace ClassLibrary
             {
                 Error = Error + "The Staff Position may not be blank : ";
             }
+
           
             try
             {

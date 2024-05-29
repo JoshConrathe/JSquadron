@@ -261,6 +261,7 @@ namespace Testing2
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
+
         public void StaffNumberNoMin()
         {
             clsStaff AnStaff = new clsStaff();
@@ -303,7 +304,7 @@ namespace Testing2
             Assert.AreEqual(Error, "");
 
         }
-      
+
         [TestMethod]
         public void AdminIdExtremeMin()
         {
@@ -408,6 +409,7 @@ namespace Testing2
             Assert.AreEqual(Error, "");
 
         }
+
         [TestMethod]
         public void StatStatisticsGroupByPosition()
         {

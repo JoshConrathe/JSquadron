@@ -7,7 +7,6 @@
          <title>Staff Information Form</title>
         <style>
 
-
 .container {
     display: flex;
     flex-direction: column;
@@ -37,9 +36,11 @@
 .input-group label {
     flex: 1;
 }
+
 h1{
     color:white;
 }
+
 
 .input-group input[type="text"],
 .input-group input[type="date"] {
@@ -57,6 +58,7 @@ input[type="submit"] {
             border-color: inherit;
             border-width: medium;
             padding: 10px;
+
             background-color: orange;
             color: black;
             cursor: pointer;
@@ -90,6 +92,7 @@ input[type="submit"]:hover {
     border-radius:3rem;
     text-align:center;
 }
+
 #ADD,#DELETE,#FIND,#List,#DashBoard,#Clear{
     border-radius:3rem;
     border:2px solid black;

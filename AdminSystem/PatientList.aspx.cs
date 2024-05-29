@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 using ClassLibrary;
 public partial class _1_List : System.Web.UI.Page
 {
-    
     protected void Page_Load(object sender, EventArgs e)
     {
       if(IsPostBack == false)
         {
+
       
                 DisplayPatientslist();
           
@@ -29,7 +29,6 @@ public partial class _1_List : System.Web.UI.Page
         LstPatientList.DataBind();  
 
     }
-
 
     protected void Button1_Click(object sender, EventArgs e)
     {

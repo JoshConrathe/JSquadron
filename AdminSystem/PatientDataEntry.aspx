@@ -4,9 +4,10 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-   
+  
      <title>Patient Information Form</title>
         <style>
+
 
 .container {
     display: flex;
@@ -22,6 +23,7 @@
 .form-container {
     width: 100%;
     background-color: orange;
+
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -43,7 +45,9 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+
                 margin-left: 91px;
+
             }
 
 
@@ -53,8 +57,10 @@ input[type="submit"] {
             border-color: inherit;
             border-width: medium;
             padding: 10px;
+
             background-color: orange;
             color: black;
+
             cursor: pointer;
             border-radius: 4px;
             margin-left: 41px;
@@ -62,6 +68,7 @@ input[type="submit"] {
         }
 
 input[type="submit"]:hover {
+
     background-color: black;
     color:white;
 }
@@ -84,10 +91,20 @@ input[type="submit"]:hover {
     text-align:center;
 }
 
+span{
+    color:black;
+                z-index: 1;
+                left: 12px;
+                top: 676px;
+                position: absolute;
+                height: 29px;
+                width: 130px;
+            }
 #Search{
     border-radius:3rem;
     text-align:center;
 }
+
 #Button1,#Button2, #Button3, #Button4, #Button5,#Clear{
     border-radius:3rem;
     border:2px solid black;

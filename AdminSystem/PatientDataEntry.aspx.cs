@@ -8,6 +8,7 @@ using ClassLibrary;
 
 public partial class _1_DataEntry : System.Web.UI.Page
 {
+
     Int32 PatientId;
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -34,10 +35,6 @@ public partial class _1_DataEntry : System.Web.UI.Page
         txtPatientAddress.Text = patient.ThisPatient.PatientAddress;
         txtPatientHistory.Text = patient.ThisPatient.PatientMedHistory;
         txtAdminID.Text = patient.ThisPatient.AdminID.ToString();
-
-
-
-
     }
 
     protected void Button4_Click(object sender, EventArgs e)
@@ -61,6 +58,7 @@ public partial class _1_DataEntry : System.Web.UI.Page
 
     protected void Unnamed2_Click(object sender, EventArgs e)
     {
+
         Response.Redirect("PatientList.aspx");
     }
 
