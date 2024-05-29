@@ -1,5 +1,9 @@
 ﻿using System;
 
+using System.Collections.Generic;
+using System.Data;
+using System.Text.RegularExpressions;
+
 namespace ClassLibrary
 {
     public class clsStaff
@@ -7,8 +11,8 @@ namespace ClassLibrary
         private Int32  mStaffId;
         private String mStaffName;
         private String mStaffPosition;
-        private Int32 mStaffContactNumber;
-        private Int32 mStaffSalary;
+        private Int64 mStaffContactNumber;
+        private float mStaffSalary;
         private Int32 mAdminID;
 
         public int StaffId 
@@ -45,7 +49,7 @@ namespace ClassLibrary
             } 
         }
 
-        public int StaffContactNumber 
+        public Int64 StaffContactNumber 
         {
             get 
             {
@@ -56,7 +60,7 @@ namespace ClassLibrary
                 mStaffContactNumber = value;
             } 
         }
-        public int StaffSalary
+        public float StaffSalary
         {
             get 
             {
@@ -88,8 +92,8 @@ namespace ClassLibrary
                 mStaffId = Convert.ToInt32(DB.DataTable.Rows[0]["StaffId"]);
                 mStaffName = Convert.ToString(DB.DataTable.Rows[0]["Name"]);
                 mStaffPosition = Convert.ToString(DB.DataTable.Rows[0]["Position"]);
-                mStaffContactNumber = Convert.ToInt32(DB.DataTable.Rows[0]["ContactNumber"]);
-                mStaffSalary = (int)Convert.ToDouble(DB.DataTable.Rows[0]["Salary"]);
+                mStaffContactNumber = Convert.ToInt64(DB.DataTable.Rows[0]["ContactNumber"]);
+                mStaffSalary = (float)Convert.ToDouble(DB.DataTable.Rows[0]["Salary"]);
                 mAdminID = Convert.ToInt32(DB.DataTable.Rows[0]["AdminId"]);
                 return true;
 
@@ -101,10 +105,25 @@ namespace ClassLibrary
             
         }
 
+
+        public DataTable StatisticsGroupByPosition()
+        {
+           clsDataConnection DB = new clsDataConnection ();
+            DB.Execute("sproc_Staff_Cound_GroupByPosition");
+            return DB.DataTable;
+        }
+
+        public DataTable StatisticsGroupBySalary()
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.Execute("sproc_Staff_Cound_GroupBySalary");
+            return DB.DataTable;
+        }
+
         public string Valid(string staffName, string staffPosition, string staffContactNumber, string staffSalary, string adminId)
         {
             String Error = "";
-            int ADMINID;
+            int adminID;
             if (staffName.Length == 0)
             {
                 Error = Error + "The Staff Name may not be blank : ";
@@ -117,26 +136,54 @@ namespace ClassLibrary
             {
                 Error = Error + "The Staff Position may not be blank : ";
             }
-            if (staffPosition.Length > 50)
+
+          
+            try
             {
-                Error = Error + "The Staff Position must be less than 50 characters : ";
+                if (staffContactNumber.Length > 10)
+                {
+                    Error = Error + "The Staff Number must be less than 10 numbers : ";
+                }
+                if (staffContactNumber.Length < 10)
+                {
+                    Error = Error + "The Staff Number must be more than 10 numbers : ";
+                }
             }
-            if (staffContactNumber.Length > 10)
+            catch
             {
-                Error = Error + "The Staff Number must be less than 10 characters : ";
+                if (!Regex.IsMatch(staffContactNumber, @"^\d+$"))
+
+                {
+                    Error = Error + "The Number may not be characket :";
+                }
             }
-            if (staffContactNumber.Length < 10)
-            { 
-                Error = Error + "The Staff Number must be less than 10 characters : ";
-            }
-            ADMINID = Convert.ToInt32(adminId);
-            if (ADMINID == 0)
+           
+           
+
+            try
             {
-                Error = Error + "The Admin ID Not correct:";
+                adminID = Convert.ToInt32(adminId);
+                if (adminID == 0)
+                {
+                    Error = Error + "The Admin ID Not correct:";
+                }
+                if (adminID >= 2)
+                {
+                    Error = Error + "The Admin ID Not correct:";
+                }
+
             }
-            if (ADMINID >= 2)
+            catch
             {
-                Error = Error + "The Admin ID Not correct:";
+                if (adminId.Length == 0)
+                {
+                    Error = Error + "The admin may not be blank :";
+                }
+                if (!Regex.IsMatch(adminId, @"^\d+$"))
+
+                {
+                    Error = Error + "The admin may not be characket :";
+                }
             }
             return Error;
             

@@ -155,14 +155,14 @@ namespace Testing2
         {
             clsStaffCollection FiltereStaff = new clsStaffCollection();
             Boolean OK = true;
-            FiltereStaff.ReportByPosition("EYESS");
+            FiltereStaff.ReportByPosition("yyyy");
             if (FiltereStaff.Count == 2)
             {
-                if (FiltereStaff.StaffLIST[0].StaffId != 21)
+                if (FiltereStaff.StaffLIST[0].StaffId != 4)
                 {
                     OK = false;
                 }
-                if (FiltereStaff.StaffLIST[1].StaffId != 22)
+                if (FiltereStaff.StaffLIST[1].StaffId != 5)
                 {
                     OK = false;
                 }

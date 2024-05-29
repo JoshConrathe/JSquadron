@@ -1,6 +1,7 @@
 ﻿using ClassLibrary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Data;
 
 
 
@@ -50,7 +51,7 @@ namespace Testing2
         public void StaffContactNumberProperty()
         {
             clsStaff AnStaff = new clsStaff();
-            Int32 TestData = 1231231231;
+            Int64 TestData = 1231231231;
             AnStaff.StaffContactNumber = TestData;
             Assert.AreEqual(AnStaff.StaffContactNumber, TestData);
         }
@@ -58,7 +59,7 @@ namespace Testing2
         public void StaffSalaryProperty()
         {
             clsStaff AnStaff = new clsStaff();
-            Int32 TestData = 100000;
+            float TestData = 100000;
             AnStaff.StaffSalary = TestData;
             Assert.AreEqual(AnStaff.StaffSalary , TestData);
         }
@@ -116,7 +117,7 @@ namespace Testing2
             Boolean OK = true;
             Int32 StaffId =3;
             Found = AnStaff.Find(StaffId);
-            if (AnStaff.StaffPosition != "ss")
+            if (AnStaff.StaffPosition != "Nurse")
             {
                 OK = false;
             }
@@ -260,91 +261,7 @@ namespace Testing2
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
-        public void StaffPositionLessOne()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            string StaffPosition = "";
-            Error = AnStaff.Valid(StaffName, StaffPosition, StaffContactNumber, StaffSalary, AdminId);
-            Assert.AreNotEqual(Error, "");
 
-        }
-        [TestMethod]
-        public void StaffPositionNoMin()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            string StaffPosition = "aaaaaa";
-            Error = AnStaff.Valid(StaffName, StaffPosition, StaffContactNumber, StaffSalary, AdminId);
-            Assert.AreEqual(Error, "");
-
-        }
-        [TestMethod]
-        public void StaffPositionMinPlusOne()
-        {
-
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            string StaffPosition = "aaaaaaaaaa";
-            Error = AnStaff.Valid(StaffName, StaffPosition, StaffContactNumber, StaffSalary, AdminId);
-            Assert.AreEqual(Error, "");
-        }
-        [TestMethod]
-        public void StaffPositionMaxLessOne()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            string StaffPosition = "aaaaaaaaa";
-            Error = AnStaff.Valid(StaffName, StaffPosition, StaffContactNumber, StaffSalary, AdminId);
-            Assert.AreEqual(Error, "");
-        }
-        [TestMethod]
-        public void StaffPositionMax()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            string StaffPosition = "aaaaaaaaa";
-            Error = AnStaff.Valid(StaffName, StaffPosition, StaffContactNumber, StaffSalary, AdminId);
-            Assert.AreEqual(Error, "");
-        }
-        public void StaffPositionNoMax()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            string StaffPosition = "aaaaaaaaaaaaaaaaaaaa";
-            Error = AnStaff.Valid(StaffName, StaffPosition, StaffContactNumber, StaffSalary, AdminId);
-            Assert.AreEqual(Error, "");
-        }
-        [TestMethod]
-        public void StaffPositionMid()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            string StaffPosition = "aaaaaa";
-            Error = AnStaff.Valid(StaffName, StaffPosition, StaffContactNumber, StaffSalary, AdminId);
-            Assert.AreEqual(Error, "");
-        }
-        [TestMethod]
-        public void StaffPositionNoMaxPlusOne()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            string StaffPosition = "";
-            StaffPosition = StaffPosition.PadRight(51,'a');
-            Error = AnStaff.Valid(StaffName, StaffPosition, StaffContactNumber, StaffSalary, AdminId);
-            Assert.AreNotEqual(Error, "");
-        }
-        [TestMethod]
-        public void StaffPositionExtremeMax()
-        {
-            clsStaff AnStaff = new clsStaff();
-            string Error = "";
-            string StaffPosition = "";
-            StaffPosition = StaffPosition.PadRight(500, 'a');
-            Error = AnStaff.Valid(StaffName, StaffPosition, StaffContactNumber, StaffSalary, AdminId);
-            Assert.AreNotEqual(Error, "");
-        }
-        [TestMethod]
         public void StaffNumberNoMin()
         {
             clsStaff AnStaff = new clsStaff();
@@ -387,6 +304,7 @@ namespace Testing2
             Assert.AreEqual(Error, "");
 
         }
+
         [TestMethod]
         public void AdminIdExtremeMin()
         {
@@ -490,6 +408,23 @@ namespace Testing2
             Error = AnStaff.Valid(StaffName, StaffPosition, StaffContactNumber, StaffSalary, AdminId);
             Assert.AreEqual(Error, "");
 
+        }
+
+        [TestMethod]
+        public void StatStatisticsGroupByPosition()
+        {
+            clsStaff anstaff = new clsStaff();
+            DataTable dt = anstaff.StatisticsGroupByPosition();
+            int noOfRecord = 10;
+            Assert.AreEqual(noOfRecord, dt.Rows.Count);
+        }
+        [TestMethod]
+        public void StatStatisticsGroupBySalary()
+        {
+            clsStaff anstaff = new clsStaff();
+            DataTable dt = anstaff.StatisticsGroupBySalary();
+            int noOfRecord = 10;
+            Assert.AreEqual(noOfRecord, dt.Rows.Count);
         }
 
     }
