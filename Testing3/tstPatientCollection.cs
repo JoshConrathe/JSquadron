@@ -22,7 +22,8 @@ namespace Testing3
             ClsPatient TestItem = new ClsPatient();
             TestItem.PatientId = 24;
             TestItem.PatientName = "Can";
-            TestItem.PatientDataBirth = DateTime.Now;
+
+            TestItem.PatientDate = DateTime.Now;
             TestItem.PatientNumber = 1111111111;
             TestItem.PatientAddress = "LE1 5SP";
             TestItem.PatientMedHistory = "Diabetes";
@@ -40,7 +41,8 @@ namespace Testing3
             ClsPatient TestPatient = new ClsPatient();
             TestPatient.PatientId = 24;
             TestPatient.PatientName = "Can";
-            TestPatient.PatientDataBirth = DateTime.Now;
+
+            TestPatient.PatientDate = DateTime.Now;
             TestPatient.PatientNumber = 1111111111;
             TestPatient.PatientAddress = "LE1 5SP";
             TestPatient.PatientMedHistory = "Diabetes";
@@ -56,7 +58,8 @@ namespace Testing3
             ClsPatient TestItem = new ClsPatient();
             TestItem.PatientId = 24;
             TestItem.PatientName = "Can";
-            TestItem.PatientDataBirth = DateTime.Now;
+
+            TestItem.PatientDate = DateTime.Now;
             TestItem.PatientNumber = 1111111111;
             TestItem.PatientAddress = "LE1 5SP";
             TestItem.PatientMedHistory = "Diabetes";
@@ -72,7 +75,8 @@ namespace Testing3
             Int32 PrimaryKey = 0;
             TestItem.PatientId = 48;
             TestItem.PatientName = "Can";
-            TestItem.PatientDataBirth = DateTime.Now;
+
+            TestItem.PatientDate = DateTime.Now;
             TestItem.PatientNumber = 1231231231;
             TestItem.PatientAddress = "LE1 5SP";
             TestItem.PatientMedHistory = "EYES";
@@ -91,7 +95,8 @@ namespace Testing3
             Int32 PrimaryKey = 0;
             TestItem.PatientId = 48;
             TestItem.PatientName = "Can";
-            TestItem.PatientDataBirth = DateTime.Now;
+
+            TestItem.PatientDate = DateTime.Now;
             TestItem.PatientNumber = 1111111111;
             TestItem.PatientAddress = "LE1 5SP";
             TestItem.PatientMedHistory = "EYES";
@@ -100,7 +105,8 @@ namespace Testing3
             PrimaryKey = AllPatient.Add();
             TestItem.PatientId = PrimaryKey;
             TestItem.PatientName = "Can";
-            TestItem.PatientDataBirth = DateTime.Now;
+
+            TestItem.PatientDate = DateTime.Now;
             TestItem.PatientNumber = 1111111111;
             TestItem.PatientAddress = "LE1 5SP";
             TestItem.PatientMedHistory = "EYES";
@@ -121,7 +127,8 @@ namespace Testing3
             Int32 PrimaryKey = 0;
             TestItem.PatientId = 48;
             TestItem.PatientName = "Can";
-            TestItem.PatientDataBirth = DateTime.Now;
+
+            TestItem.PatientDate = DateTime.Now;
             TestItem.PatientNumber = 1231231231;
             TestItem.PatientAddress = "LE1 5SP";
             TestItem.PatientMedHistory = "EYE";

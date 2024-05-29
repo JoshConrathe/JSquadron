@@ -11,7 +11,8 @@ namespace Testing3
     public class tstPatient
     {
         string patientName = "OZMEN";
-        string patientDataBirth = DateTime.Now.ToShortDateString();
+
+        string PatientDate = DateTime.Now.ToShortDateString();
         string patientNumber = "1231233211";
         string patientAddress = "LE1 5SP";
         string patientMedHistory = "EYES";
@@ -47,8 +48,9 @@ namespace Testing3
         {
             ClsPatient Patient = new ClsPatient();
             DateTime TestData = DateTime.Now;
-            Patient.PatientDataBirth = TestData;
-            Assert.AreEqual(Patient.PatientDataBirth, TestData);
+
+            Patient.PatientDate = TestData;
+            Assert.AreEqual(Patient.PatientDate, TestData);
 
         }
         [TestMethod]
@@ -131,7 +133,8 @@ namespace Testing3
             Boolean OK = true;
             Int32 PatientId = 61;
             Found = Patient.Find(PatientId);
-            if (Patient.PatientDataBirth != Convert.ToDateTime("19/05/2024"))
+
+            if (Patient.PatientDate != Convert.ToDateTime("19/05/2024"))
             {
                 OK = false;
             }
@@ -199,7 +202,8 @@ namespace Testing3
         {
             ClsPatient AnPatient = new ClsPatient();
             String Error = "";
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -208,7 +212,8 @@ namespace Testing3
             ClsPatient AnPatient = new ClsPatient();
             string Error = "";
             string patientName = "";
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreNotEqual(Error, "");
 
         }
@@ -218,7 +223,8 @@ namespace Testing3
             ClsPatient AnPatient = new ClsPatient();
             string Error = "";
             string patientName = "aaaaaa";
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
 
         }
@@ -229,7 +235,8 @@ namespace Testing3
             ClsPatient AnPatient = new ClsPatient();
             string Error = "";
             string patientName = "aaaaaaaaaa";
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -238,7 +245,7 @@ namespace Testing3
             ClsPatient AnPatient = new ClsPatient();
             string Error = "";
             string patientName = "aaaaaaaaa";
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -247,7 +254,8 @@ namespace Testing3
             ClsPatient AnPatient = new ClsPatient();
             string Error = "";
             string patientName = "aaaaaaaaa";
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
         }
         public void PatientNameNoMax()
@@ -255,7 +263,8 @@ namespace Testing3
             ClsPatient AnPatient = new ClsPatient();
             string Error = "";
             string patientName = "aaaaaaaaaaaaaaaaaaaa";
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -264,7 +273,8 @@ namespace Testing3
             ClsPatient AnPatient = new ClsPatient();
             string Error = "";
             string patientName = "aaaaaa";
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -273,7 +283,8 @@ namespace Testing3
             ClsPatient AnPatient = new ClsPatient();
             string Error = "";
             string patientName = "aaaaaaaaaaaaaaaaaaaaa";
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -283,7 +294,8 @@ namespace Testing3
             string Error = "";
             string patientName = "";
             patientName = patientName.PadRight(500, 'a');
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -294,8 +306,9 @@ namespace Testing3
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddYears(-100);
-            string patientDataBirth = TestDate.ToString();
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            string PatientDate = TestDate.ToString();
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -307,8 +320,9 @@ namespace Testing3
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddDays(-1);
-            string patientDataBirth = TestDate.ToString();
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            string PatientDate = TestDate.ToString();
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreNotEqual(Error, ""); ;
         }
         [TestMethod]
@@ -318,8 +332,9 @@ namespace Testing3
             String Error = "";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
-            string patientDataBirth = TestDate.ToString();
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            string PatientDate = TestDate.ToString();
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -330,8 +345,9 @@ namespace Testing3
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddYears(100);
-            string patientDataBirth = TestDate.ToString();
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            string PatientDate = TestDate.ToString();
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreNotEqual(Error, "");
 
         }
@@ -342,7 +358,8 @@ namespace Testing3
             string Error = "";
             string patientNumber = "";
             patientNumber = patientNumber.PadRight(10, 'a');
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
 
         }
@@ -354,7 +371,8 @@ namespace Testing3
             string Error = "";
             string patientNumber = "";
             patientNumber = patientNumber.PadRight(11, 'a');
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]    
@@ -364,7 +382,8 @@ namespace Testing3
             string Error = "";
             string patientNumber = "";
             patientNumber = patientNumber.PadRight(10, 'a');
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
 
         }
@@ -375,7 +394,8 @@ namespace Testing3
             string Error = "";
             string patientNumber = "";
             patientNumber = patientNumber.PadRight(10, 'a');
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
 
         }
@@ -385,7 +405,8 @@ namespace Testing3
             ClsPatient AnPatient = new ClsPatient();
             string Error = "";
             string patientAddress = "LE1 5SP";
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
           }
       
@@ -396,7 +417,8 @@ namespace Testing3
             string Error = "";
             string patientAddress = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
                 "Vivamus suscipit tortor eget felis porttitor volutpat. Donec rutrum congue le";
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -406,7 +428,8 @@ namespace Testing3
             string Error = "";
             string patientAddress = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
                 "Vivamus suscipit tortor eget felis porttitor volutpat. Donec rutrum congue le";
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
         }
        
@@ -416,7 +439,8 @@ namespace Testing3
             ClsPatient AnPatient = new ClsPatient();
             string Error = "";
             string patientMedHistory = "High blood pressure";            
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -425,7 +449,8 @@ namespace Testing3
             ClsPatient AnPatient = new ClsPatient();
             string Error = "";
             string patientMedHistory = "High blood pressure ,History of diabetes";
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -434,7 +459,8 @@ namespace Testing3
             ClsPatient AnPatient = new ClsPatient();
             string Error = "";
             string patientMedHistory = "History of allergies to penicillin, History of asthma, History of heart disease, History of diabetes";
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -443,7 +469,8 @@ namespace Testing3
             ClsPatient AnPatient = new ClsPatient();
             string Error = "";
             string patientMedHistory = "Appendectomy in 2005, Broken arm in childhood, Allergic to shellfish, History of depression, Diabetes since 2010";
-            Error = AnPatient.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = AnPatient.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             
         }
         [TestMethod]
@@ -455,7 +482,8 @@ namespace Testing3
             int TestAdminID;
             TestAdminID = 1;
             string adminID = TestAdminID.ToString();
-            Error = ANAdmin.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = ANAdmin.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
 
         }
@@ -468,7 +496,8 @@ namespace Testing3
             int TestAdminID;
             TestAdminID = 0;
             string adminID = TestAdminID.ToString();
-            Error = ANAdmin.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = ANAdmin.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreNotEqual(Error, "");
 
         }
@@ -481,7 +510,8 @@ namespace Testing3
             int TestAdminID;
             TestAdminID = 1;
             string adminID = TestAdminID.ToString();
-            Error = ANAdmin.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = ANAdmin.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
 
         }
@@ -494,7 +524,8 @@ namespace Testing3
             int TestAdminID;
             TestAdminID = 2;
             string adminID = TestAdminID.ToString();
-            Error = ANAdmin.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = ANAdmin.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreNotEqual(Error, "");
 
         }
@@ -507,7 +538,8 @@ namespace Testing3
             int TestAdminID;
             TestAdminID = 1;
             string adminID = TestAdminID.ToString();
-            Error = ANAdmin.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = ANAdmin.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
 
         }
@@ -520,7 +552,8 @@ namespace Testing3
             int TestAdminID;
             TestAdminID = 0;
             string adminID = TestAdminID.ToString();
-            Error = ANAdmin.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = ANAdmin.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreNotEqual(Error, "");
 
         }
@@ -533,7 +566,8 @@ namespace Testing3
             int TestAdminID;
             TestAdminID = 2;
             string adminID = TestAdminID.ToString();
-            Error = ANAdmin.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = ANAdmin.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreNotEqual(Error, "");
 
         }
@@ -546,7 +580,8 @@ namespace Testing3
             int TestAdminID;
             TestAdminID = 1;
             string adminID = TestAdminID.ToString();
-            Error = ANAdmin.Valid(patientName, patientDataBirth, patientNumber, patientAddress, patientMedHistory, adminID);
+
+            Error = ANAdmin.Valid(patientName, PatientDate, patientNumber, patientAddress, patientMedHistory, adminID);
             Assert.AreEqual(Error, "");
 
         }
@@ -555,7 +590,8 @@ namespace Testing3
         {
             ClsPatient AnPatient = new ClsPatient();
             DataTable dt = AnPatient.StatisticsGroupByDate();
-            int noOfRecord=4;
+
+            int noOfRecord=3;
             Assert.AreEqual(noOfRecord, dt.Rows.Count);
         }
         [TestMethod]
@@ -563,7 +599,9 @@ namespace Testing3
         {
             ClsPatient AnPatient = new ClsPatient();
             DataTable dt = AnPatient.StatisticsGroupByHistory();
-            int noOfRecord = 2;
+
+            int noOfRecord = 2
+                ;
             Assert.AreEqual(noOfRecord, dt.Rows.Count);
         }
 

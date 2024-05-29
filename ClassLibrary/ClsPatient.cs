@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using System.Data;
 
+using System.Text.RegularExpressions;
+
 namespace ClassLibrary
 {
     public class ClsPatient
     {
         private Int32 mPatientId;
         private String mPatientName;
-        private Int32 mPatientNumber;
+
+        private Int64 mPatientNumber;
         private DateTime mStartDate;
         private String mPatientAddress;
         private String mPatientHistory;
@@ -39,7 +42,8 @@ namespace ClassLibrary
         
         }
 
-        public DateTime PatientDataBirth 
+
+        public DateTime PatientDate
         {
             get
             {   
@@ -50,7 +54,8 @@ namespace ClassLibrary
                 mStartDate = value;
             } 
         }
-        public int PatientNumber 
+
+        public Int64 PatientNumber 
         {
             get 
             {
@@ -107,7 +112,8 @@ namespace ClassLibrary
                 mPatientId = Convert.ToInt32(DB.DataTable.Rows[0]["PatientID"]);
                 mPatientName = Convert.ToString(DB.DataTable.Rows[0]["name"]);
                 mStartDate = Convert.ToDateTime(DB.DataTable.Rows[0]["PatientDate"]);
-                mPatientNumber = Convert.ToInt32(DB.DataTable.Rows[0]["number"]);
+
+                mPatientNumber = Convert.ToInt64(DB.DataTable.Rows[0]["number"]);
                 mPatientAddress = Convert.ToString(DB.DataTable.Rows[0]["PostCode"]);
                 mPatientHistory = Convert.ToString(DB.DataTable.Rows[0]["medhistory"]);
                 mAdminId = Convert.ToInt32(DB.DataTable.Rows[0]["AdminId"]);
@@ -121,16 +127,19 @@ namespace ClassLibrary
 
      
 
-        public string Valid(string patientName, string patientDataBirth, string patientNumber, string patientAddress, string patientMedHistory, string adminID)
+
+        public string Valid(string patientName, string PatientDate, string patientNumber, string patientAddress, string patientMedHistory, string adminID)
         {
             String Error = "";
             DateTime DateTemp;
             int adminId;
-
+       
             if (patientName.Length == 0)
             {
                 Error = Error + "The PatientName may not be blank : ";
             }
+
+
             if (patientName.Length > 20)
             {
                 Error = Error + "The PatientName must be less than 20 characters : ";
@@ -139,7 +148,8 @@ namespace ClassLibrary
             try
             {
 
-                DateTemp = Convert.ToDateTime(patientDataBirth);
+
+                DateTemp = Convert.ToDateTime(PatientDate);
                 if (DateTemp < DateComp)
                 {
 
@@ -157,31 +167,48 @@ namespace ClassLibrary
 
                 Error = Error + "The date was not a valid date : ";
             }
+           
+                if (patientNumber.Length > 10)
+                {
 
-            if (patientNumber.Length > 10)
-            {
-
-                Error = Error + "The PatientNumber must be less than 10 characters : ";
+                    Error = Error + "The PatientNumber must be less than 10 numbers : ";
 
 
+                }
+                if (patientNumber.Length < 10)
+                {
+
+                    Error = Error + "The PatientNumber must be more than 10 numbers : ";
+                }
+            
+         
+
+        
+            try{
+                adminId = Convert.ToInt32(adminID);
+                if (adminId == 0)
+                {
+                    Error = Error + "The Admin ID Not correct:";
+                }
+                if (adminId >= 2)
+                {
+                    Error = Error + "The Admin ID Not correct:";
+                }
+              
             }
-            if (patientNumber.Length < 10)
+            catch
             {
+                if(adminID.Length == 0)
+                {
+                    Error = Error + "The admin may not be blank :";
+                }
+                if (!Regex.IsMatch(adminID, @"^\d+$"))
 
-                Error = Error + "The PatientNumber must be less than 10 characters : ";
-
-
+                {
+                    Error = Error + "The admin may not be characket :";
+                }
             }
-
-            adminId = Convert.ToInt32(adminID);
-            if (adminId == 0)
-            {
-                Error = Error + "The Admin ID Not correct:";
-            }
-            if (adminId >= 2)
-            {
-                Error = Error + "The Admin ID Not correct:";
-            }
+            
             return Error;
         }
         public DataTable StatisticsGroupByDate()

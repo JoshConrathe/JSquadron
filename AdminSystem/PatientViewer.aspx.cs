@@ -16,7 +16,8 @@ public partial class _1Viewer : System.Web.UI.Page
         Patient = (ClsPatient)Session["Patient"];
         Response.Write("PatientId: " + Patient.PatientId + "<br />");
         Response.Write("PatientName: " + Patient.PatientName + "<br />");
-        Response.Write("PatientDataBirth: " + Patient.PatientDataBirth + "<br />");
+
+        Response.Write("PatientData: " + Patient.PatientDate + "<br />");
         Response.Write("PatientNumber: " + Patient.PatientNumber + "<br />");
         Response.Write("PatientAddress: " + Patient.PatientAddress + "<br />");
         Response.Write("PatientMedHistory: " + Patient.PatientMedHistory + "<br />");

@@ -69,8 +69,9 @@ namespace ClassLibrary
                 ClsPatient ANPatient = new ClsPatient();
                 ANPatient.PatientId = Convert.ToInt32(DB.DataTable.Rows[Index]["PatientID"]);
                 ANPatient.PatientName = Convert.ToString(DB.DataTable.Rows[Index]["name"]);
-                ANPatient.PatientDataBirth = Convert.ToDateTime(DB.DataTable.Rows[Index]["PatientDate"]);
-                ANPatient.PatientNumber = Convert.ToInt32(DB.DataTable.Rows[Index]["number"]);
+
+                ANPatient.PatientDate = Convert.ToDateTime(DB.DataTable.Rows[Index]["PatientDate"]);
+                ANPatient.PatientNumber = Convert.ToInt64(DB.DataTable.Rows[Index]["number"]);
                 ANPatient.PatientAddress = Convert.ToString(DB.DataTable.Rows[Index]["PostCode"]);
                 ANPatient.PatientMedHistory = Convert.ToString(DB.DataTable.Rows[Index]["medhistory"]);
                 ANPatient.AdminID = Convert.ToInt32(DB.DataTable.Rows[Index]["AdminId"]);
@@ -84,7 +85,8 @@ namespace ClassLibrary
         {
            clsDataConnection DB =new clsDataConnection();
             DB.AddParameter("@PatientName", mThisPatient.PatientName);
-            DB.AddParameter("@PatientDate", mThisPatient.PatientDataBirth);
+
+            DB.AddParameter("@PatientDate", mThisPatient.PatientDate);
             DB.AddParameter("@ContactNumber", mThisPatient.PatientNumber);
             DB.AddParameter("@PostCode", mThisPatient.PatientAddress);
             DB.AddParameter("@MedicalHistory", mThisPatient.PatientMedHistory);
@@ -99,7 +101,8 @@ namespace ClassLibrary
             clsDataConnection DB = new clsDataConnection();
             DB.AddParameter("@PatientId", mThisPatient.PatientId);
             DB.AddParameter("@PatientName", mThisPatient.PatientName);
-            DB.AddParameter("@PatientDate", mThisPatient.PatientDataBirth);
+
+            DB.AddParameter("@PatientDate", mThisPatient.PatientDate);
             DB.AddParameter("@ContactNumber", mThisPatient.PatientNumber);
             DB.AddParameter("@PostCode", mThisPatient.PatientAddress);
             DB.AddParameter("@MedicalHistory", mThisPatient.PatientMedHistory);
@@ -111,7 +114,8 @@ namespace ClassLibrary
         public void Delete()
         {
             clsDataConnection DB = new clsDataConnection();
-            DB.AddParameter("@PatientID", mThisPatient.PatientId);
+
+            DB.AddParameter("@PatientId", mThisPatient.PatientId);
             DB.Execute("sproc_Patient_Delete");
         }
 
