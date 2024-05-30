@@ -4,3 +4,9 @@ D:\Skeleton\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReferenc
 D:\Skeleton\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
 D:\Skeleton\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.dll
 D:\Skeleton\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.pdb
+H:\Downloads\JSquadron 1\JSquadron\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+H:\Downloads\JSquadron 1\JSquadron\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+H:\Downloads\JSquadron 1\JSquadron\ClassLibrary\obj\Debug\ClassLibrary.dll
+H:\Downloads\JSquadron 1\JSquadron\ClassLibrary\obj\Debug\ClassLibrary.pdb
+H:\Downloads\JSquadron 1\JSquadron\ClassLibrary\bin\Debug\ClassLibrary.dll
+H:\Downloads\JSquadron 1\JSquadron\ClassLibrary\bin\Debug\ClassLibrary.pdb
