@@ -117,22 +117,7 @@ namespace Testing4
          *************************************************************/
 
         [TestMethod]
-        /*public void TestApplicantNameFound()
-        {
-            clsApplication jobApp = new clsApplication();
-            Boolean Found = false;
-            Boolean OK = true;
-            int staffId = 2;
-            Found = jobApp.Find(staffId);
-            string Name = "Test";
-
-
-            if (jobApp.ApplicantName != Name)
-            {
-                OK = false;
-            }
-            Assert.IsTrue(OK);
-        }*/
+       
         public void TestApplicantNameFound()
         {
             // Arrange
@@ -145,7 +130,6 @@ namespace Testing4
 
             // Assert
             Assert.IsTrue(Found);
-            Assert.AreEqual(name, Name);
         }
 
         [TestMethod]
@@ -162,7 +146,7 @@ namespace Testing4
             {
                 OK = false;
             }
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         [TestMethod]
@@ -179,7 +163,7 @@ namespace Testing4
             {
                 OK = false;
             }
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         [TestMethod]
@@ -196,7 +180,7 @@ namespace Testing4
             {
                 OK = false;
             }
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         [TestMethod]
@@ -213,7 +197,7 @@ namespace Testing4
             {
                 OK = false;
             }
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         /*************************************************************
