@@ -27,12 +27,15 @@ namespace Testing4
         [TestMethod]
         public void instanceConstructorWithPropertiesOk()
         {
+            Int32 AppId = 2;
+            Int32 StaffId = 2;
+            Int32 AdminId = 2;
             String applicantName = "TestName";
             String emailAddress = "testEmail";
             String contactNumber = "test0762318";
             String poistionApplied = "testPosition";
 
-            clsApplication jobApplication = new clsApplication(applicantName, emailAddress, contactNumber, poistionApplied);
+            clsApplication jobApplication = new clsApplication(AppId, StaffId, AdminId, applicantName, emailAddress, contactNumber, poistionApplied);
 
             Assert.IsNotNull(jobApplication);
         }

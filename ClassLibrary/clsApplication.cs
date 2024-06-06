@@ -5,7 +5,7 @@ namespace ClassLibrary
 {
     public class clsApplication
     {
-        private int mApplictaionId;
+        private Int32 mApplicationId;
         private int mAdminId;
         private int mStaffId;
         private string mApplicantName;
@@ -14,7 +14,7 @@ namespace ClassLibrary
         private string mPositionApplied;
         private string mResume;
         // Fields
-        public int ApplicationId { get { return mApplictaionId; } set { mApplictaionId = value; } }
+        public int ApplicationId { get { return mApplicationId; } set { mApplicationId = value; } }
         public int AdminId { get { return mAdminId; } set { mAdminId = value; } }
         public int StaffId { get { return mStaffId; } set { mStaffId = value; } }
         public string ApplicantName { get { return mApplicantName; } set { mApplicantName = value; } }
@@ -28,8 +28,11 @@ namespace ClassLibrary
         public clsApplication()
         {
         }
-        public clsApplication(string applicantName, string emailAddress, string positionApplied, string contactNumber, string resume = null)
+        public clsApplication(int applicationId, int staffId, int adminId, string applicantName, string emailAddress, string positionApplied, string contactNumber, string resume = null)
         {
+            ApplicationId = applicationId;
+            StaffId = staffId;
+            AdminId = adminId;
             ApplicantName = applicantName;
             EmailAddress = emailAddress;
             ContactNumber = contactNumber;
@@ -42,11 +45,11 @@ namespace ClassLibrary
 
             clsDataConnection DB = new clsDataConnection();
             DB.AddParameter("@StaffId", StaffId);
-            DB.Execute("jobApplication_FilterByStaffId");
+            DB.Execute("dbo.jobApplication_FilterByStaffId");
 
             if (DB.Count == 1)
             {
-                mApplictaionId = (int)DB.DataTable.Rows[0]["ApplicationId"];
+                mApplicationId = Convert.ToInt32(DB.DataTable.Rows[0]["ApplicationId"]);
                 mStaffId = StaffId;
                 mAdminId = 1;
                 mApplicantName = Convert.ToString(DB.DataTable.Rows[0]["ApplicantName"]);

@@ -26,9 +26,9 @@ public partial class _1_DataEntry : System.Web.UI.Page
     {
         clsApplication Application = new clsApplication();
 
-        int staffId = 0;
+        int staffId = 2;
         int.TryParse(Request.Form["txtStaffId"], out staffId);
-        int adminId = 0;
+        int adminId = 1;
         string fullName = String.Format("{0}", Request.Form["txtFullName"]);
         string contactNumber = String.Format("{0}", Request.Form["txtPhone"]);
         string positionApplied = String.Format("{0}", Request.Form["txtPosition"]);
@@ -128,8 +128,10 @@ public partial class _1_DataEntry : System.Web.UI.Page
 
             }
         }
-        
+    }
 
-       
+    protected void ListGoButton_Click(Object sender, EventArgs e)
+    {
+        Response.Redirect("ApplicationList.aspx");
     }
 }

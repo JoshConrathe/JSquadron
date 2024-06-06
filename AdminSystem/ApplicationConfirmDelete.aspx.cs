@@ -20,12 +20,12 @@ public partial class _1_ConfirmDelete : System.Web.UI.Page
         clsApplicationCollection apps = new clsApplicationCollection();
         apps.ThisApplication.Find(ApplicationId);
         apps.Delete();
-        Response.Redirect("ApplicationList.aspx");
+        Response.Redirect("ApplicationViewer.aspx");
     }
 
     protected void CancelButton_Click(object sender, EventArgs e)
     {
-        Response.Redirect("ApplicationList.aspx");
+        Response.Redirect("ApplicationViewer.aspx");
     }
 
 

@@ -24,4 +24,9 @@ public partial class _1Viewer : System.Web.UI.Page
     {
         Response.Redirect("ApplicationDataEntry.aspx");
     }
+
+    protected void listForwardButton_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("ApplicationList.aspx");
+    }
 }
