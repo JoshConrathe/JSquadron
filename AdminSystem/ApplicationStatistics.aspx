@@ -14,7 +14,7 @@
             <br />
             <br />
             <div>
-                <h3>Applicatino List - Grouped by Position</h3>
+                <h3>Application List - Grouped by Position</h3>
                 <br />
                 <asp:GridView ID="GridGroupPosition" runat="server"></asp:GridView>
             </div>
@@ -23,7 +23,7 @@
             <br />
 
             <div>
-                <h3>Applicatino List - Grouped by Position</h3>
+                <h3>Application List - Grouped by Position</h3>
                 <br />
                 <asp:GridView ID="GridGroupStaffId" runat="server"></asp:GridView>
             </div>

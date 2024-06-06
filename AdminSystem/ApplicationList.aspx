@@ -34,23 +34,20 @@
                 <span>MENUU-icon"</span>
                 <span>MENU</span>
             </div>
-            <div class="header-right">
-                <a href=""><span>Account</span> </a>
-            </div>
         </header>
         <aside class="sidebar">
             <ul class="sidebar-list">
                 <li class="sidebar-list-item">
-                    <a href="4ConfirmDelete.aspx">Staff Registration</a>
+                    <a href="StaffList.aspx">Staff Registration</a>
                 </li>
                 <li class="sidebar-list-item">
-                    <a href="">Patient Registration</a>
+                    <a href="PatientList.aspx">Patient Registration</a>
                 </li>
                 <li class="sidebar-list-item">
                     <a href="ApplicationViewer.aspx">Job Application </a>
                 </li>
                 <li class="sidebar-list-item">
-                    <a href="sdf">Appointment</a>
+                    <a href="">Appointment</a>
                 </li>
                 <li class="sidebar-list-item">
                     <a href="">Payment</a>
@@ -65,7 +62,7 @@
                 <br />
                 <asp:Button ID="lstAddButton" runat="server" Text="Add" Width="90px" Height="32px" CssClass="listAddButton" OnClick="btnAdd_Click" />
 
-                <asp:Button ID="lstEditButton" runat="server" Height="32px" Width="90px" CssClass="listAddButton" OnClick="EditButton_Click" Text="Edit" />
+                <asp:Button ID="lstEditButton" runat="server" Height="32px" Width="90px" CssClass="listEditButton" OnClick="EditButton_Click" Text="Edit" />
 
                 <asp:Button ID="lstDeleteButton" runat="server" Height="32px" Width="90px" CssClass="listDeleteButton" OnClick="DeleteButton_Click" Text="Delete" />
 

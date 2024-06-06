@@ -126,7 +126,7 @@ input[type="submit"]:hover {
        <a href="PatientList.aspx">Patient Registration</a>
          </li>
         <li class="sidebar-list-item" >
-         <a href="">Job Application </a>
+         <a href="ApplicationViewer.aspx">Job Application </a>
          </li>
        <li class="sidebar-list-item" >
          <a href="">Appointment</a>

@@ -33,23 +33,20 @@
                 <span>MENUU-icon"</span>
                 <span>MENU</span>
             </div>
-            <div class="header-right">
-                <a href=""><span>Account</span> </a>
-            </div>
         </header>
         <aside class="sidebar">
             <ul class="sidebar-list">
                 <li class="sidebar-list-item">
-                    <a href="4ConfirmDelete.aspx">Staff Registration</a>
+                    <a href="StaffList.aspx">Staff Registration</a>
                 </li>
                 <li class="sidebar-list-item">
-                    <a href="">Patient Registration</a>
+                    <a href="PatientList.aspx">Patient Registration</a>
                 </li>
                 <li class="sidebar-list-item">
                     <a href="ApplicationViewer.aspx">Job Application </a>
                 </li>
                 <li class="sidebar-list-item">
-                    <a href="sdf">Appointment</a>
+                    <a href="">Appointment</a>
                 </li>
                 <li class="sidebar-list-item">
                     <a href="">Payment</a>
@@ -57,9 +54,6 @@
             </ul>
         </aside>
         <main class="main-container">
-            <div class="main-title">
-                <h2>Job Application</h2>
-            </div>
             <h3>Jobs available</h3>
             <div class="mainparts">
                 <div class="part">
@@ -103,7 +97,7 @@
                         name="staffId"
                         runat="server"
                         required
-                        placeholder="e.g. 3"
+                        placeholder="e.g. 2"
                         style="width: 293px; height: 39px;" />
 
                     <label for="fullName" style="width: 268px; height: 39px;">

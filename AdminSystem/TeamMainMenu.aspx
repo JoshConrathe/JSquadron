@@ -24,7 +24,7 @@
        <a href="PatientList.aspx">Patient Registration</a>
        </li>
        <li class="sidebar-list-item" >
-       <a href="">Job Application </a>
+       <a href="ApplicationViewer.aspx">Job Application </a>
        </li>
        <li class="sidebar-list-item" >
         <a href="">Appointment</a>
@@ -44,21 +44,21 @@
   <div class="mainparts">
     <div class="part">
       <div class="part-inner">
-        <h3><a href="">Staff Registration</a></h3>
+        <h3><a href="StaffList.aspx">Staff Registration</a></h3>
       </div>
       <h1>249</h1>
     </div>
 
     <div class="part">
       <div class="part-inner">
-        <h3><a href="">Patient Registration</a></h3>
+        <h3><a href="PatientList.aspx">Patient Registration</a></h3>
       </div>
       <h1>25</h1>
     </div>
 
     <div class="part">
       <div class="part-inner">
-        <h3><a href="">Job Application</a></h3>
+        <h3><a href="ApplicationList.aspx">Job Application</a></h3>
       </div>
       <h1>1500</h1>
     </div>

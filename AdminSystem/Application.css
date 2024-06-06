@@ -182,8 +182,11 @@ a {
 .BigApplyButton {
     border-radius: 5px;
     background-color: aquamarine;
+    
 }
-.BigApplyButton {
+.BigApplyButton:hover {
+    cursor: pointer;
+    background-color:lightgreen;
 }
 
 .findButton {
@@ -193,6 +196,7 @@ a {
 
 .findButton:hover {
     background-color: grey;
+    cursor: pointer;
 }
 
 .submitAppButton {
@@ -202,9 +206,19 @@ a {
     color: white;
 }
 
+.submitAppButton; {
+    cursor: pointer;
+    background-color:lightgreen;
+}
+
 .cancelAppbutton {
     border-radius: 6px;
     border: 1px black solid;
+}
+
+.cancelAppbutton:hover {
+    background-color: indianred;
+    cursor: pointer;
 }
 
 .listApplication {
@@ -218,11 +232,36 @@ a {
     margin-right: 18px;
 }
 
+.listBackButton:hover {
+    background-color: darkgray;
+    color: white;
+    cursor: pointer;
+}
+
 .listAddButton {
     border-radius: 6px;
-    background-color:forestgreen;
+    background-color: lightgreen;
     color: white;
     margin-right: 18px;
+}
+
+.listAddButton {
+    background-color: forestgreen;
+    color: white;
+    cursor: pointer;
+}
+
+.listEditButton {
+    border-radius: 6px;
+    background-color: cornflowerblue;
+    color: white;
+    cursor: pointer;
+}
+
+.listEditButton:hover {
+    background-color:darkblue;
+    color: white;
+    cursor: pointer;
 }
 
 .delete_confirm_container {
@@ -245,4 +284,10 @@ a {
     background-color: indianred;
     color: white;
     margin-right: 18px;
+}
+
+.listDeleteButton:hover {
+    background-color: crimson;
+    color: white;
+    cursor:pointer;
 }
