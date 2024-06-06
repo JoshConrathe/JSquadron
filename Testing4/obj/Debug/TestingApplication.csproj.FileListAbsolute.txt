@@ -12,3 +12,19 @@ H:\Downloads\JSquadron 1\JSquadron\Testing4\obj\Debug\TestingApplication.csproj.
 H:\Downloads\JSquadron 1\JSquadron\Testing4\obj\Debug\TestingA.39218E7D.Up2Date
 H:\Downloads\JSquadron 1\JSquadron\Testing4\obj\Debug\Testing4.dll
 H:\Downloads\JSquadron 1\JSquadron\Testing4\obj\Debug\Testing4.pdb
+H:\Downloads\ProjectJ\testAgain\Testing4\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+H:\Downloads\ProjectJ\testAgain\Testing4\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+H:\Downloads\ProjectJ\testAgain\Testing4\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+H:\Downloads\ProjectJ\testAgain\Testing4\bin\Debug\Testing4.dll
+H:\Downloads\ProjectJ\testAgain\Testing4\bin\Debug\Testing4.pdb
+H:\Downloads\ProjectJ\testAgain\Testing4\bin\Debug\ClassLibrary.dll
+H:\Downloads\ProjectJ\testAgain\Testing4\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+H:\Downloads\ProjectJ\testAgain\Testing4\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+H:\Downloads\ProjectJ\testAgain\Testing4\bin\Debug\ClassLibrary.pdb
+H:\Downloads\ProjectJ\testAgain\Testing4\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+H:\Downloads\ProjectJ\testAgain\Testing4\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+H:\Downloads\ProjectJ\testAgain\Testing4\obj\Debug\TestingApplication.csproj.AssemblyReference.cache
+H:\Downloads\ProjectJ\testAgain\Testing4\obj\Debug\TestingApplication.csproj.CoreCompileInputs.cache
+H:\Downloads\ProjectJ\testAgain\Testing4\obj\Debug\TestingA.39218E7D.Up2Date
+H:\Downloads\ProjectJ\testAgain\Testing4\obj\Debug\Testing4.dll
+H:\Downloads\ProjectJ\testAgain\Testing4\obj\Debug\Testing4.pdb
