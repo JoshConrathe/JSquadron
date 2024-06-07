@@ -1,5 +1,6 @@
 ﻿using System;
 using System.CodeDom.Compiler;
+using System.Data;
 using System.Runtime.Remoting.Messaging;
 using System.Security.Policy;
 using System.Text.RegularExpressions;
@@ -290,6 +291,20 @@ namespace ClassLibrary
             }
 
             return Error;
+        }
+
+        public DataTable StatisticsGroupByDateApp()
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.Execute("sproc_Appointment_Cound_GroupByTime");
+            return DB.DataTable;
+        }
+
+        public DataTable StatisticsGroupByTimeapp()
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.Execute("sproc_Appointment_Cound_GroupByDate");
+            return DB.DataTable;
         }
     }
 }

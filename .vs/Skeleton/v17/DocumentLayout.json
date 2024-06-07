@@ -1,0 +1,181 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "H:\\Documents\\VSTesting3\\JSquadron\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{157421EE-9D45-44EB-9290-6574686CB7FC}|H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem|h:\\documents\\vstesting3\\jsquadron\\adminsystem\\appointmentstatistics.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{157421EE-9D45-44EB-9290-6574686CB7FC}|H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem|solutionrelative:adminsystem\\appointmentstatistics.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E32146CF-EC09-4709-9881-42ADF1B0735B}|ClassLibrary\\ClassLibrary.csproj|H:\\Documents\\VSTesting3\\JSquadron\\classlibrary\\clsappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E32146CF-EC09-4709-9881-42ADF1B0735B}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\clsappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E32146CF-EC09-4709-9881-42ADF1B0735B}|ClassLibrary\\ClassLibrary.csproj|H:\\Documents\\VSTesting3\\JSquadron\\classlibrary\\clsappointmentcollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E32146CF-EC09-4709-9881-42ADF1B0735B}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\clsappointmentcollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{157421EE-9D45-44EB-9290-6574686CB7FC}|H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem|H:\\Documents\\VSTesting3\\JSquadron\\adminsystem\\applicationviewer.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{157421EE-9D45-44EB-9290-6574686CB7FC}|H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem|solutionrelative:adminsystem\\applicationviewer.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{157421EE-9D45-44EB-9290-6574686CB7FC}|H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem|H:\\Documents\\VSTesting3\\JSquadron\\adminsystem\\applicationdataentry.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{157421EE-9D45-44EB-9290-6574686CB7FC}|H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem|solutionrelative:adminsystem\\applicationdataentry.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{157421EE-9D45-44EB-9290-6574686CB7FC}|H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem|H:\\Documents\\VSTesting3\\JSquadron\\adminsystem\\staffstatistics.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{157421EE-9D45-44EB-9290-6574686CB7FC}|H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem|solutionrelative:adminsystem\\staffstatistics.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E32146CF-EC09-4709-9881-42ADF1B0735B}|ClassLibrary\\ClassLibrary.csproj|H:\\Documents\\VSTesting3\\JSquadron\\classlibrary\\clspatient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E32146CF-EC09-4709-9881-42ADF1B0735B}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\clspatient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{157421EE-9D45-44EB-9290-6574686CB7FC}|H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem|H:\\Documents\\VSTesting3\\JSquadron\\adminsystem\\appointmentstatistics.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{157421EE-9D45-44EB-9290-6574686CB7FC}|H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem|solutionrelative:adminsystem\\appointmentstatistics.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{157421EE-9D45-44EB-9290-6574686CB7FC}|H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem|H:\\Documents\\VSTesting3\\JSquadron\\adminsystem\\staffstatistics.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{157421EE-9D45-44EB-9290-6574686CB7FC}|H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem|solutionrelative:adminsystem\\staffstatistics.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7032FF54-9316-4FFF-9612-EBA55F9781BA}|Testing3\\TestingPatient.csproj|H:\\Documents\\VSTesting3\\JSquadron\\testing3\\tstpatient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7032FF54-9316-4FFF-9612-EBA55F9781BA}|Testing3\\TestingPatient.csproj|solutionrelative:testing3\\tstpatient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApplicationViewer.aspx",
+              "DocumentMoniker": "H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem\\ApplicationViewer.aspx",
+              "RelativeDocumentMoniker": "AdminSystem\\ApplicationViewer.aspx",
+              "ToolTip": "H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem\\ApplicationViewer.aspx",
+              "RelativeToolTip": "AdminSystem\\ApplicationViewer.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-07T08:48:24.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDataEntry.aspx",
+              "DocumentMoniker": "H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem\\ApplicationDataEntry.aspx",
+              "RelativeDocumentMoniker": "AdminSystem\\ApplicationDataEntry.aspx",
+              "ToolTip": "H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem\\ApplicationDataEntry.aspx",
+              "RelativeToolTip": "AdminSystem\\ApplicationDataEntry.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-07T08:47:19.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "clsAppointment.cs",
+              "DocumentMoniker": "H:\\Documents\\VSTesting3\\JSquadron\\ClassLibrary\\clsAppointment.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\clsAppointment.cs",
+              "ToolTip": "H:\\Documents\\VSTesting3\\JSquadron\\ClassLibrary\\clsAppointment.cs",
+              "RelativeToolTip": "ClassLibrary\\clsAppointment.cs",
+              "ViewState": "AQIAABABAAAAAAAAAAAqwDUBAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T08:44:02.577Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StaffStatistics.aspx.cs",
+              "DocumentMoniker": "H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem\\StaffStatistics.aspx.cs",
+              "RelativeDocumentMoniker": "AdminSystem\\StaffStatistics.aspx.cs",
+              "ToolTip": "H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem\\StaffStatistics.aspx.cs",
+              "RelativeToolTip": "AdminSystem\\StaffStatistics.aspx.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T08:41:44.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StaffStatistics.aspx",
+              "DocumentMoniker": "H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem\\StaffStatistics.aspx",
+              "RelativeDocumentMoniker": "AdminSystem\\StaffStatistics.aspx",
+              "ToolTip": "H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem\\StaffStatistics.aspx",
+              "RelativeToolTip": "AdminSystem\\StaffStatistics.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-07T08:41:40.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppointmentStatistics.aspx.cs",
+              "DocumentMoniker": "H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem\\AppointmentStatistics.aspx.cs",
+              "RelativeDocumentMoniker": "AdminSystem\\AppointmentStatistics.aspx.cs",
+              "ToolTip": "H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem\\AppointmentStatistics.aspx.cs",
+              "RelativeToolTip": "AdminSystem\\AppointmentStatistics.aspx.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T08:41:31.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "clsAppointmentCollection.cs",
+              "DocumentMoniker": "H:\\Documents\\VSTesting3\\JSquadron\\ClassLibrary\\clsAppointmentCollection.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\clsAppointmentCollection.cs",
+              "ToolTip": "H:\\Documents\\VSTesting3\\JSquadron\\ClassLibrary\\clsAppointmentCollection.cs",
+              "RelativeToolTip": "ClassLibrary\\clsAppointmentCollection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T08:51:54.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AppointmentStatistics.aspx",
+              "DocumentMoniker": "H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem\\AppointmentStatistics.aspx",
+              "RelativeDocumentMoniker": "AdminSystem\\AppointmentStatistics.aspx",
+              "ToolTip": "H:\\Documents\\VSTesting3\\JSquadron\\AdminSystem\\AppointmentStatistics.aspx",
+              "RelativeToolTip": "AdminSystem\\AppointmentStatistics.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-07T08:41:29.798Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "tstPatient.cs",
+              "DocumentMoniker": "H:\\Documents\\VSTesting3\\JSquadron\\Testing3\\tstPatient.cs",
+              "RelativeDocumentMoniker": "Testing3\\tstPatient.cs",
+              "ToolTip": "H:\\Documents\\VSTesting3\\JSquadron\\Testing3\\tstPatient.cs",
+              "RelativeToolTip": "Testing3\\tstPatient.cs",
+              "ViewState": "AQIAABICAAAAAAAAAAAAACsCAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T08:40:46.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ClsPatient.cs",
+              "DocumentMoniker": "H:\\Documents\\VSTesting3\\JSquadron\\ClassLibrary\\ClsPatient.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\ClsPatient.cs",
+              "ToolTip": "H:\\Documents\\VSTesting3\\JSquadron\\ClassLibrary\\ClsPatient.cs",
+              "RelativeToolTip": "ClassLibrary\\ClsPatient.cs",
+              "ViewState": "AQIAALgAAAAAAAAAAAAAANAAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T08:40:36.611Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

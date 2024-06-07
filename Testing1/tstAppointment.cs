@@ -2,6 +2,7 @@
 using ClassLibrary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Data;
 
 
 namespace Testing1
@@ -710,6 +711,22 @@ namespace Testing1
 
             Error = appointment.Valid(StaffId, PatientId, AdminId, Date, Time);
             Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void StatStatisticsGroupByDate()
+        {
+            clsAppointment AnPatient = new clsAppointment();
+            DataTable dt = AnPatient.StatisticsGroupByDateApp();
+            int noOfRecord = 3;
+            Assert.AreEqual(noOfRecord, dt.Rows.Count);
+        }
+        [TestMethod]
+        public void StatStatisticsGroupByTime()
+        {
+            clsAppointment AnPatient = new clsAppointment();
+            DataTable dt = AnPatient.StatisticsGroupByTimeapp();
+            int noOfRecord = 2;
+            Assert.AreEqual(noOfRecord, dt.Rows.Count);
         }
     }
 }
