@@ -76,7 +76,7 @@
                         <a href="AppointmentViewer.aspx">Appointment</a>
                     </li>
                     <li class="sidebar-list-item">
-                        <a href="">Payment</a>
+                        <a href="FinanceViewer.aspx">Payment</a>
                     </li>
                 </ul>
             </aside>

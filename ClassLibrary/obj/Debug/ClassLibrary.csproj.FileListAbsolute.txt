@@ -28,3 +28,9 @@ H:\Documents\VSTesting3\JSquadron\ClassLibrary\obj\Debug\ClassLibrary.csproj.Ass
 H:\Documents\VSTesting3\JSquadron\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
 H:\Documents\VSTesting3\JSquadron\ClassLibrary\obj\Debug\ClassLibrary.dll
 H:\Documents\VSTesting3\JSquadron\ClassLibrary\obj\Debug\ClassLibrary.pdb
+H:\Documents\VSTestingFINAL\JSquadron\ClassLibrary\bin\Debug\ClassLibrary.dll
+H:\Documents\VSTestingFINAL\JSquadron\ClassLibrary\bin\Debug\ClassLibrary.pdb
+H:\Documents\VSTestingFINAL\JSquadron\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+H:\Documents\VSTestingFINAL\JSquadron\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+H:\Documents\VSTestingFINAL\JSquadron\ClassLibrary\obj\Debug\ClassLibrary.dll
+H:\Documents\VSTestingFINAL\JSquadron\ClassLibrary\obj\Debug\ClassLibrary.pdb
