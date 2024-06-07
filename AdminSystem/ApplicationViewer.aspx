@@ -37,7 +37,7 @@
             <a href="ApplicationViewer.aspx">Job Application </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="sdf">Appointment</a>
+            <a href="AppointmentViewer.aspx">Appointment</a>
           </li>
           <li class="sidebar-list-item">
             <a href="">Payment</a>
