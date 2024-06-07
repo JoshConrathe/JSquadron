@@ -48,6 +48,8 @@
     <Compile Include="clsStaffCollection.cs" />
 	<Compile Include="clsApplication.cs" />
     <Compile Include="clsApplicationCollection.cs" />
+	<Compile Include="clsAppointment.cs" />
+    <Compile Include="clsAppointmentCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
